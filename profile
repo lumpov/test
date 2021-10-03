@@ -1,0 +1,7 @@
+{
+  "name": "имя",
+  "balance": 0,
+  "referrer": "KIOX",
+  "invitee": [100, 200, 300, 400],
+  "status": "приглашает",
+ }
