@@ -1,5 +1,5 @@
 <head>
-<script src="https://www.google.com/recaptcha/enterprise.js?render=6Lc9AaQoAAAAAMwyiqL_NTshBD80tbPU4oxaoPg3"></script>
+<script src="https://www.google.com/recaptcha/enterprise.js?render=6LcxTKQoAAAAAJ383uWHF8wRK4zVhbliVagFx77y"></script>
 ...
 </head>
 
@@ -7,7 +7,7 @@
 function onClick(e) {
   //e.preventDefault();
   grecaptcha.enterprise.ready(async () => {
-    const token = await grecaptcha.enterprise.execute('6Lc9AaQoAAAAAMwyiqL_NTshBD80tbPU4oxaoPg3', {action: 'CREATE_PAYMENT'});
+    const token = await grecaptcha.enterprise.execute('6LcxTKQoAAAAAJ383uWHF8wRK4zVhbliVagFx77y', {action: 'CREATE_PAYMENT'});
     
     console.log('token:'+token);
     
