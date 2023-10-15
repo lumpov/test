@@ -1,1 +1,21 @@
-<h1>Hello world</h1>
+<head>
+<script src="https://www.google.com/recaptcha/enterprise.js?render=6Lc9AaQoAAAAAMwyiqL_NTshBD80tbPU4oxaoPg3"></script>
+...
+</head>
+
+<script>
+function onClick(e) {
+  e.preventDefault();
+  grecaptcha.enterprise.ready(async () => {
+    const token = await grecaptcha.enterprise.execute('6Lc9AaQoAAAAAMwyiqL_NTshBD80tbPU4oxaoPg3', {action: 'CREATE_PAYMENT'});
+    
+    console.log('token:'+token);
+    
+    // IMPORTANT: The 'token' that results from execute is an encrypted response sent by
+    // reCAPTCHA Enterprise to the end user's browser.
+    // This token must be validated by creating an assessment.
+    // See https://cloud.google.com/recaptcha-enterprise/docs/create-assessment
+  });
+}
+</script>
+<h1 onClick=onClick>Hello world</h1>
