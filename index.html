@@ -5,7 +5,7 @@
 
 <script>
 function onClick(e) {
-  e.preventDefault();
+  //e.preventDefault();
   grecaptcha.enterprise.ready(async () => {
     const token = await grecaptcha.enterprise.execute('6Lc9AaQoAAAAAMwyiqL_NTshBD80tbPU4oxaoPg3', {action: 'CREATE_PAYMENT'});
     
@@ -19,3 +19,5 @@ function onClick(e) {
 }
 </script>
 <h1 onClick=onClick>Hello world</h1>
+
+<a id="myLink" href="#" onclick="onClick();return false;">link text</a>
